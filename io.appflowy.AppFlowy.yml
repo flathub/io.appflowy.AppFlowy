@@ -12,6 +12,8 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --device=all
+  - --filesystem=home
+  - --socket=system-bus
 modules:
   - name: keybinder3
     buildsystem: autotools
