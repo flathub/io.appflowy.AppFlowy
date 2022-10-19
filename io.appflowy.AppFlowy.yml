@@ -12,6 +12,7 @@ finish-args:
   - --share=network
   - --device=all
   - --filesystem=home
+  - --system-talk-name=org.freedesktop.NetworkManager.*
 modules:
   - name: keybinder3
     buildsystem: autotools
