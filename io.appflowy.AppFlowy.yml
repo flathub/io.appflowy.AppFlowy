@@ -34,8 +34,8 @@ modules:
       - install -Dm644 io.appflowy.AppFlowy.desktop /app/share/applications/io.appflowy.AppFlowy.desktop
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.0.8/AppFlowy-linux-x86.tar.gz
-        sha256: 8ef2aa65870f43ae40adca6cadbc34297804c9f22b0c4b25658f2a7edf33f659
+        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.0.8.1/AppFlowy-linux-x86.tar.gz
+        sha256: f127a7fcba232c153a98950ebed81b077036ec7fea617b25e597872a0d193c4b
         x-checker-data:
           type: anitya
           project-id: 309593
