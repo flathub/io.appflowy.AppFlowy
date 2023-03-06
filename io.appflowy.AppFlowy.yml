@@ -40,13 +40,12 @@ modules:
   - name: appflowy
     buildsystem: simple
     build-commands:
-      - cp -r appflowy /app/appflowy
-      - chmod +x /app/appflowy/app_flowy
-      - mkdir /app/bin
-      - ln -s /app/appflowy/app_flowy /app/bin/app_flowy
       - install -Dm644 logo.svg /app/share/icons/hicolor/scalable/apps/io.appflowy.AppFlowy.svg
       - install -Dm644 io.appflowy.AppFlowy.appdata.xml /app/share/appdata/io.appflowy.AppFlowy.appdata.xml
       - install -Dm644 io.appflowy.AppFlowy.desktop /app/share/applications/io.appflowy.AppFlowy.desktop
+      - cp -r appflowy /app/appflowy
+      - chmod +x /app/appflowy/app_flowy
+      - ln -s /app/appflowy/app_flowy /app/bin/app_flowy
     sources:
       - type: archive
         url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.1.0/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-18.04.tar.gz
