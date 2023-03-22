@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <id>io.appflowy.AppFlowy</id>
-  
+
   <name>AppFlowy</name>
   <summary>Open Source Notion Alternative</summary>
 
   <url type="homepage">https://appflowy.io</url>
-  
+
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>AGPL-3.0-only</project_license>
-  
+
   <description>
     <p>
       Built for teams that need more control and flexibility;
     </p>
     <p>
-      100% data control You can host AppFlowy wherever you want; 
+      100% data control You can host AppFlowy wherever you want;
     </p>
     <p>
       no vendor lock-in.
@@ -36,7 +36,7 @@
       Truely native experience Faster, more stable with support for offline mode. It's also better integrated with different devices. Moreover, AppFlowy enables users to access features and possibilities not available on the web.
     </p>
   </description>
-  
+
   <launchable type="desktop-id">io.appflowy.AppFlowy.desktop</launchable>
   <screenshots>
     <screenshot type="default">
@@ -45,6 +45,7 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="0.1.1" date="2023-03-22"/>
     <release version="0.1.0" date="2023-02-09"/>
     <release version="0.0.9" date="2022-12-21"/>
     <release version="0.0.8.1" date="2022-12-09"/>

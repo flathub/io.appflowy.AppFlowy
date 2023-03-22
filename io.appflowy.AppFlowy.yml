@@ -48,7 +48,7 @@ modules:
       - ln -s /app/appflowy/app_flowy /app/bin/app_flowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.1.0/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-18.04.tar.gz
+        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.1.1/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-18.04.tar.gz
         sha256: 252a62d68713bd3adafdc88a59efc67ab0bc64bc894c41ec6f2d53d225526f55
         x-checker-data:
           type: anitya
