@@ -2,5 +2,5 @@
 Type=Application
 Name=AppFlowy
 Icon=io.appflowy.AppFlowy
-Exec=app_flowy
-MimeType=x-scheme-handler/appflowy;
+Exec=AppFlowy
+MimeType=x-scheme-handler/AppFlowy;
