@@ -2,7 +2,7 @@ app-id: io.appflowy.AppFlowy
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
-command: app_flowy
+command: AppFlowy
 separate-locales: false
 finish-args:
   - --share=ipc
@@ -44,12 +44,12 @@ modules:
       - install -Dm644 io.appflowy.AppFlowy.appdata.xml /app/share/appdata/io.appflowy.AppFlowy.appdata.xml
       - install -Dm644 io.appflowy.AppFlowy.desktop /app/share/applications/io.appflowy.AppFlowy.desktop
       - cp -r appflowy /app/appflowy
-      - chmod +x /app/appflowy/app_flowy
-      - ln -s /app/appflowy/app_flowy /app/bin/app_flowy
+      - chmod +x /app/appflowy/AppFlowy
+      - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.1.0/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-18.04.tar.gz
-        sha256: 252a62d68713bd3adafdc88a59efc67ab0bc64bc894c41ec6f2d53d225526f55
+        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.1.1/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-18.04.tar.gz
+        sha256: e3c1ac68db9ee56e1c5e64bd021667c168e8c41d316baa2bf562c2350ff77d13
         x-checker-data:
           type: anitya
           project-id: 309593
