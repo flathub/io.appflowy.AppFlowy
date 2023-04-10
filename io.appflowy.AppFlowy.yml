@@ -34,8 +34,8 @@ modules:
         url: https://github.com/openssl/openssl/archive/OpenSSL_1_1_1s.tar.gz
         sha256: 0dc03a5842801884e25211d81f9fa8d2fce5aad6a9e996eac0deb68994a80243
     cleanup:
-      - '/share/doc'
-      - '/share/man'
+      - /share/doc
+      - /share/man
 
   - name: appflowy
     buildsystem: simple
@@ -48,8 +48,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.1.1/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-18.04.tar.gz
-        sha256: e3c1ac68db9ee56e1c5e64bd021667c168e8c41d316baa2bf562c2350ff77d13
+        url: https://github.com/AppFlowy-IO/appflowy/releases/download/0.1.2/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-18.04.tar.gz
+        sha256: 7f5db231aca883e9036043e1112dc3b8105fd499e4126a62d3f2fdc672ac2a65
         x-checker-data:
           type: anitya
           project-id: 309593
