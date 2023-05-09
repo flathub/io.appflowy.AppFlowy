@@ -43,7 +43,7 @@ modules:
       - install -Dm644 logo.svg /app/share/icons/hicolor/scalable/apps/io.appflowy.AppFlowy.svg
       - install -Dm644 io.appflowy.AppFlowy.appdata.xml /app/share/appdata/io.appflowy.AppFlowy.appdata.xml
       - install -Dm644 io.appflowy.AppFlowy.desktop /app/share/applications/io.appflowy.AppFlowy.desktop
-      - cp -r appflowy /app/appflowy
+      - cp -r appflowy/AppFlowy /app/appflowy
       - chmod +x /app/appflowy/AppFlowy
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
