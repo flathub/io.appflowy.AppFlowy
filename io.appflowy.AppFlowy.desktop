@@ -3,4 +3,4 @@ Type=Application
 Name=AppFlowy
 Icon=io.appflowy.AppFlowy
 Exec=AppFlowy
-MimeType=x-scheme-handler/AppFlowy;
+MimeType=x-scheme-handler/appflowy-flutter;
