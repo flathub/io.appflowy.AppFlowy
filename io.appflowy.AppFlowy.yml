@@ -40,16 +40,26 @@ modules:
   - name: appflowy
     buildsystem: simple
     build-commands:
+      # Install the icon.
       - install -Dm644 logo.svg /app/share/icons/hicolor/scalable/apps/io.appflowy.AppFlowy.svg
+      # # Install the AppStream metadata file.
       - install -Dm644 io.appflowy.AppFlowy.appdata.xml /app/share/appdata/io.appflowy.AppFlowy.appdata.xml
+      # Install the desktop file.
       - install -Dm644 io.appflowy.AppFlowy.desktop /app/share/applications/io.appflowy.AppFlowy.desktop
+      # Install the D-Bus service file.
+      - install -Dm644 io.appflowy.AppFlowy.service /app/share/dbus-1/services/io.appflowy.AppFlowy.service
+      # Install the launcher.sh.
+      - install -Dm755 launcher.sh /app/bin/launcher.sh
+      # Install launcher desktop file.
+      - install -Dm644 io.appflowy.AppFlowy.launcher.desktop /app/share/applications/io.appflowy.AppFlowy.launcher.desktop
       - cp -r appflowy/AppFlowy /app/appflowy
       - chmod +x /app/appflowy/AppFlowy
+      - chmod +x /app/bin/launcher.sh
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.2.9/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-20.04.tar.gz
-        sha256: df5209cc538ef3121f620c176ffecb91584e2e1f2d04b77145e284edd8c133dc
+        url: https://github.com/LucasXu0/AppFlowy/releases/download/0.2.9/AppFlowy-linux-x86.tar.gz
+        sha256: 803bf8e754089c973901fde46e8ac7875d12e72fe29bd9db406f1385b5daf7ad
         x-checker-data:
           type: anitya
           project-id: 309593
@@ -61,4 +71,10 @@ modules:
         path: io.appflowy.AppFlowy.appdata.xml
       - type: file
         path: logo.svg
+      - type: file
+        path: io.appflowy.AppFlowy.service
+      - type: file
+        path: launcher.sh
+      - type: file
+        path: io.appflowy.AppFlowy.launcher.desktop
 

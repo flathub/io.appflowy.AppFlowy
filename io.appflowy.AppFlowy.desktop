@@ -2,5 +2,8 @@
 Type=Application
 Name=AppFlowy
 Icon=io.appflowy.AppFlowy
-Exec=AppFlowy
-MimeType=x-scheme-handler/appflowy-flutter;
+Exec=env GDK_GL=gles AppFlowy %U
+Categories=Network;Productivity;
+Keywords=Notes
+DBusActivatable=true
+Implements=io.appflowy.Appflowy;
