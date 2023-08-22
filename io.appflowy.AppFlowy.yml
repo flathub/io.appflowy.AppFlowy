@@ -40,11 +40,21 @@ modules:
   - name: appflowy
     buildsystem: simple
     build-commands:
+      # Install the icon.
       - install -Dm644 logo.svg /app/share/icons/hicolor/scalable/apps/io.appflowy.AppFlowy.svg
+      # # Install the AppStream metadata file.
       - install -Dm644 io.appflowy.AppFlowy.appdata.xml /app/share/appdata/io.appflowy.AppFlowy.appdata.xml
+      # Install the desktop file.
       - install -Dm644 io.appflowy.AppFlowy.desktop /app/share/applications/io.appflowy.AppFlowy.desktop
+      # Install the D-Bus service file.
+      - install -Dm644 io.appflowy.AppFlowy.service /app/share/dbus-1/services/io.appflowy.AppFlowy.service
+      # Install the launcher.sh.
+      - install -Dm755 launcher.sh /app/bin/launcher.sh
+      # Install launcher desktop file.
+      - install -Dm644 io.appflowy.AppFlowy.launcher.desktop /app/share/applications/io.appflowy.AppFlowy.launcher.desktop
       - cp -r appflowy/AppFlowy /app/appflowy
       - chmod +x /app/appflowy/AppFlowy
+      - chmod +x /app/bin/launcher.sh
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
@@ -61,4 +71,10 @@ modules:
         path: io.appflowy.AppFlowy.appdata.xml
       - type: file
         path: logo.svg
+      - type: file
+        path: io.appflowy.AppFlowy.service
+      - type: file
+        path: launcher.sh
+      - type: file
+        path: io.appflowy.AppFlowy.launcher.desktop
 
