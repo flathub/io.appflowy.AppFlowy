@@ -58,8 +58,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.2.9/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-20.04.tar.gz
-        sha256: df5209cc538ef3121f620c176ffecb91584e2e1f2d04b77145e284edd8c133dc
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.3.0/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-20.04.tar.gz
+        sha256: 2c1ff191bf22c1c9d8d90dbb25707c7cdfdee91d7750ca3bf4e9f3134a2bcae6
         x-checker-data:
           type: anitya
           project-id: 309593
