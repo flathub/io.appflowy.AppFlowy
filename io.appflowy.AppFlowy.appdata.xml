@@ -1,73 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>io.appflowy.AppFlowy</id>
-
-  <name>AppFlowy</name>
-  <summary>Open Source Notion Alternative</summary>
-
-  <url type="homepage">https://appflowy.io</url>
-
-  <metadata_license>CC-BY-4.0</metadata_license>
-  <project_license>AGPL-3.0-only</project_license>
-
-  <description>
-    <p>
-      Built for teams that need more control and flexibility;
-    </p>
-    <p>
-      100% data control You can host AppFlowy wherever you want;
-    </p>
-    <p>
-      no vendor lock-in.
-    </p>
-    <p>
-      Unlimited customizations Design and modify AppFlowy your way with an open core codebase.
-    </p>
-    <p>
-      One codebase supporting multiple platforms AppFlowy is built with Flutter and Rust. What does this mean? Faster development, better native experience, and more reliable performance.
-    </p>
-    <p>
-      Built for individuals who care about data security and mobile experience ## 100% control of your data Download and install AppFlowy on your local machine. You own and control your personal data.
-    </p>
-    <p>
-      Extensively extensible For those with no coding experience, AppFlowy enables you to create apps that suit your needs. It's built on a community-driven toolbox, including templates, plugins, themes, and more.
-    </p>
-    <p>
-      Truely native experience Faster, more stable with support for offline mode. It's also better integrated with different devices. Moreover, AppFlowy enables users to access features and possibilities not available on the web.
-    </p>
-  </description>
-
-  <launchable type="desktop-id">io.appflowy.AppFlowy.desktop</launchable>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png</image>
-    </screenshot>
-  </screenshots>
-  <content_rating type="oars-1.1"/>
-  <releases>
-    <release version="0.3.0" date="2023-08-23"/>
-    <release version="0.2.9" date="2023-08-10"/>
-    <release version="0.2.8" date="2023-08-03"/>
-    <release version="0.2.7" date="2023-07-18"/>
-    <release version="0.2.6" date="2023-07-11"/>
-    <release version="0.2.5" date="2023-07-02"/>
-    <release version="0.2.4" date="2023-06-23"/>
-    <release version="0.2.3" date="2023-06-22"/>
-    <release version="0.2.2" date="2023-06-15"/>
-    <release version="0.2.1" date="2023-06-11"/>
-    <release version="0.2.0" date="2023-06-08"/>
-    <release version="0.1.6" date="2023-05-31"/>
-    <release version="0.1.5" date="2023-05-11"/>
-    <release version="0.1.4" date="2023-05-04"/>
-    <release version="0.1.3" date="2023-04-24"/>
-    <release version="0.1.2" date="2023-03-29"/>
-    <release version="0.1.1" date="2023-03-22"/>
-    <release version="0.1.0" date="2023-02-09"/>
-    <release version="0.0.9" date="2022-12-21"/>
-    <release version="0.0.8.1" date="2022-12-09"/>
-    <release version="0.0.7" date="2022-11-28"/>
-    <release version="0.0.6.2" date="2022-10-30"/>
-    <release version="0.0.6.1" date="2022-10-27"/>
-    <release version="0.0.5.3" date="2022-10-12"/>
-  </releases>
+	<id>
+		io.appflowy.AppFlowy
+	</id>
+	<name>
+		AppFlowy
+	</name>
+	<summary>
+		Open Source Notion Alternative
+	</summary>
+	<url type="homepage">
+		https://appflowy.io
+	</url>
+	<metadata_license>
+		CC-BY-4.0
+	</metadata_license>
+	<project_license>
+		AGPL-3.0-only
+	</project_license>
+	<description>
+		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: 0px; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			AppFlowy is a privacy-first open source workspace for your notes, tasks, databases, and more.
+		</p>
+		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: -0.5rem; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			Built for individuals who care about data security and mobile experience
+		</p>
+		<ul style="box-sizing: inherit; margin-bottom: 1.5rem; margin-left: 1rem; margin-top: 0px; padding-left: 1rem; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				100% control of your data
+			</li>
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				Download and install AppFlowy on your local machine
+			</li>
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				You own and control your personal data
+			</li>
+		</ul>
+		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: 0px; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			Built for teams that need more control and flexibility (Coming Soon):
+		</p>
+		<ul style="box-sizing: inherit; margin-bottom: 1.5rem; margin-left: 1rem; margin-top: 0px; padding-left: 1rem; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				100% data control You can host AppFlowy wherever you want
+			</li>
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				No vendor lock-in
+			</li>
+		</ul>
+		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: 0px; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			Extensively extensible
+		</p>
+		<ul style="box-sizing: inherit; margin-bottom: 1.5rem; margin-left: 1rem; margin-top: 0px; padding-left: 1rem; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				For those with no coding experience, AppFlowy enables you to create apps that suit your needs
+			</li>
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				It's built on a community-driven toolbox, including templates, plugins, themes, and more
+			</li>
+		</ul>
+		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: 0px; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			Truly native experience
+		</p>
+		<ul style="box-sizing: inherit; margin-bottom: 1.5rem; margin-left: 1rem; margin-top: 0px; padding-left: 1rem; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				Faster, more stable with support for offline mode
+			</li>
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				It's also better integrated with different devices
+			</li>
+			<li style="box-sizing: inherit; margin: 0px; padding: 0px;">
+				Moreover, AppFlowy enables users to access features and possibilities not available on the web
+			</li>
+		</ul>
+		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: 0px; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			Follow us on
+			<a href="https://twitter.com/appflowy" style="box-sizing: inherit; background-color: rgba(0, 0, 0, 0); color: rgb(0, 102, 204); text-decoration: none;">
+				Twitter
+			</a>
+			,
+			<a href="https://www.reddit.com/r/AppFlowy/" style="box-sizing: inherit; background-color: rgba(0, 0, 0, 0); color: rgb(0, 102, 204); text-decoration: none;">
+				Reddit
+			</a>
+			, and
+			<a href="https://discord.gg/9Q2xaN37tV" style="box-sizing: inherit; background-color: rgba(0, 0, 0, 0); color: rgb(0, 102, 204); text-decoration: none;">
+				Discord
+			</a>
+			for product news and tips!
+		</p>
+		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: -0.5rem; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			Contribute to
+			<a href="https://github.com/AppFlowy-IO/AppFlowy" style="box-sizing: inherit; background-color: rgba(0, 0, 0, 0); color: rgb(0, 102, 204); text-decoration: none;">
+				AppFlowy
+			</a>
+			on GitHub
+		</p>
+	</description>
+	<launchable type="desktop-id">
+		io.appflowy.AppFlowy.desktop
+	</launchable>
+	<screenshots>
+		<screenshot type="default">
+			<image>
+				https://github.com/AppFlowy-IO/appflowy/raw/main/doc/imgs/welcome.png
+			</image>
+		</screenshot>
+	</screenshots>
+	<content_rating type="oars-1.1" />
+	<releases>
+		<release version="0.3.0" date="2023-08-23" />
+		<release version="0.2.9" date="2023-08-10" />
+		<release version="0.2.8" date="2023-08-03" />
+		<release version="0.2.7" date="2023-07-18" />
+		<release version="0.2.6" date="2023-07-11" />
+		<release version="0.2.5" date="2023-07-02" />
+		<release version="0.2.4" date="2023-06-23" />
+		<release version="0.2.3" date="2023-06-22" />
+		<release version="0.2.2" date="2023-06-15" />
+		<release version="0.2.1" date="2023-06-11" />
+		<release version="0.2.0" date="2023-06-08" />
+		<release version="0.1.6" date="2023-05-31" />
+		<release version="0.1.5" date="2023-05-11" />
+		<release version="0.1.4" date="2023-05-04" />
+		<release version="0.1.3" date="2023-04-24" />
+		<release version="0.1.2" date="2023-03-29" />
+		<release version="0.1.1" date="2023-03-22" />
+		<release version="0.1.0" date="2023-02-09" />
+		<release version="0.0.9" date="2022-12-21" />
+		<release version="0.0.8.1" date="2022-12-09" />
+		<release version="0.0.7" date="2022-11-28" />
+		<release version="0.0.6.2" date="2022-10-30" />
+		<release version="0.0.6.1" date="2022-10-27" />
+		<release version="0.0.5.3" date="2022-10-12" />
+	</releases>
 </component>
