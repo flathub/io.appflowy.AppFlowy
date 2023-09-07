@@ -52,7 +52,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.3.1/AppFlowy_x86_64-unknown-linux-gnu_ubuntu-20.04.tar.gz
-        sha256: 05091d7cde5b8b86e62ee31afeb2ac5d80ed8497abe2fee461ff5506693864bb
+        sha256: 309ebe3f6badb84c76f027952c4f319198fa8b14ce7421a26f02c53d6d58215c
         x-checker-data:
           type: anitya
           project-id: 309593
