@@ -13,6 +13,7 @@ finish-args:
   - --device=all
   - --filesystem=home
   - --system-talk-name=org.freedesktop.NetworkManager.*
+  - --own-name=io.appflowy.appflowy
 modules:
   - name: keybinder3
     buildsystem: autotools
