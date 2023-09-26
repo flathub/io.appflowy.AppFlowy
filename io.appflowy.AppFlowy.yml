@@ -65,4 +65,3 @@ modules:
         path: io.appflowy.AppFlowy.appdata.xml
       - type: file
         path: logo.svg
-
