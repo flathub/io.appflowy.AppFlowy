@@ -38,6 +38,23 @@ modules:
       - /share/doc
       - /share/man
 
+  - name: libnotify
+    buildsystem: meson
+    config-opts:
+      - -Dtests=false
+      - -Dintrospection=disabled
+      - -Dman=false
+      - -Dgtk_doc=false
+      - -Ddocbook_docs=disabled
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.3.tar.xz
+        sha256: ee8f3ef946156ad3406fdf45feedbdcd932dbd211ab4f16f75eba4f36fb2f6c0
+        x-checker-data:
+          type: anitya
+          project-id: 13149
+          url-template: https://download.gnome.org/sources/libnotify/$major.$minor/libnotify-$version.tar.xz
+
   - name: appflowy
     buildsystem: simple
     build-commands:
@@ -52,8 +69,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.3.4/AppFlowy-0.3.4-linux-x86_64.tar.gz
-        sha256: 0c3b10d1e48e21e1e8ceb42f8df560da2835bb30e41eda8748a81333f04e9ca9
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.3.5/AppFlowy-0.3.5-linux-x86_64.tar.gz
+        sha256: 006a12152b740cc2df49060c706943ee3202f7d0177f8fb5117d0b1e2982d4c8
         x-checker-data:
           type: anitya
           project-id: 309593
