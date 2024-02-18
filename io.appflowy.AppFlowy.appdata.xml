@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-	<id>
-		io.appflowy.AppFlowy
-	</id>
-	<name>
-		AppFlowy
-	</name>
-	<summary>
-		Open Source Notion Alternative
-	</summary>
-	<url type="homepage">
-		https://appflowy.io
-	</url>
-	<metadata_license>
-		CC-BY-4.0
-	</metadata_license>
-	<project_license>
-		AGPL-3.0-only
-	</project_license>
+	<id>io.appflowy.AppFlowy</id>
+	<name>AppFlowy</name>
+	<summary>Open Source Notion Alternative</summary>
+	<url type="homepage">https://appflowy.io</url>
+	<metadata_license>CC-BY-4.0</metadata_license>
+	<project_license>AGPL-3.0-only</project_license>
 	<developer_name>AppFlowy developers</developer_name>
 	<description>
 		<p style="box-sizing: inherit; line-height: 1.5rem; margin-top: 0px; padding-top: 0.4rem; margin-bottom: 1.1rem; max-width: 40em; color: rgb(0, 0, 0); font-family: &quot;Ubuntu variable&quot;, Ubuntu, -apple-system, &quot;Segoe UI&quot;, Roboto, Oxygen, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
@@ -80,33 +68,27 @@
 			Contribute to <a href="https://github.com/AppFlowy-IO/AppFlowy">AppFlowy</a> on GitHub
 		</p>
 	</description>
-	<launchable type="desktop-id">
-		io.appflowy.AppFlowy.desktop
-	</launchable>
+	<launchable type="desktop-id">io.appflowy.AppFlowy.desktop</launchable>
 	<screenshots>
 		<screenshot type="default">
-			<image>
-				https://user-images.githubusercontent.com/12026239/236664610-fc209a97-815e-4716-af07-d94a859d1907.png
-			</image>
+			<image>https://user-images.githubusercontent.com/12026239/236664610-fc209a97-815e-4716-af07-d94a859d1907.png</image>
 		</screenshot>
 		<screenshot type="default">
-			<image>
-				https://user-images.githubusercontent.com/12026239/236664628-5def2450-914a-4b2d-b907-92b7476b9863.png
-			</image>
+			<image>https://user-images.githubusercontent.com/12026239/236664628-5def2450-914a-4b2d-b907-92b7476b9863.png</image>
 		</screenshot>
 		<screenshot type="default">
-			<image>
-				https://user-images.githubusercontent.com/12026239/236664642-22e26c1b-5eae-4635-9aa6-b12ecf1c3c46.png
-			</image>
+			<image>https://user-images.githubusercontent.com/12026239/236664642-22e26c1b-5eae-4635-9aa6-b12ecf1c3c46.png</image>
 		</screenshot>
 		<screenshot type="default">
-			<image>
-				https://user-images.githubusercontent.com/12026239/237925643-6be93d2b-a5c5-48a9-b7cf-c599d5f5140c.png
-			</image>
+			<image>https://user-images.githubusercontent.com/12026239/237925643-6be93d2b-a5c5-48a9-b7cf-c599d5f5140c.png</image>
 		</screenshot>
 	</screenshots>
 	<content_rating type="oars-1.1"/>
+	<categories>
+		<category>Office</category>
+	</categories>
 	<releases>
+		<release version="0.4.9" date="2024-02-18"/>
 		<release version="0.4.6" date="2024-02-03"/>
 		<release version="0.4.5" date="2024-02-02"/>
 		<release version="0.4.3" date="2024-01-16"/>
