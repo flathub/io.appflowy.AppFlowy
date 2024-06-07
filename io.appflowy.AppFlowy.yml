@@ -14,7 +14,10 @@ finish-args:
   - --filesystem=home
   - --system-talk-name=org.freedesktop.NetworkManager.*
   - --own-name=io.appflowy.appflowy
+
 modules:
+  - modules/mpv.yml
+
   - name: keybinder3
     buildsystem: autotools
     post-install:
