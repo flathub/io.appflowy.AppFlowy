@@ -1,7 +1,14 @@
 app-id: io.appflowy.AppFlowy
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
+add-extensions:
+  org.freedesktop.Platform.ffmpeg-full:
+    directory: lib/ffmpeg
+    version: "23.08"
+    add-ld-path: "."
+cleanup-commands:
+  - mkdir -p /app/lib/ffmpeg
 command: AppFlowy
 separate-locales: false
 finish-args:
