@@ -16,7 +16,103 @@ finish-args:
   - --own-name=io.appflowy.appflowy
 
 modules:
-  - modules/mpv.yml
+  - name: libass
+    sources:
+      - type: archive
+        url: https://github.com/libass/libass/releases/download/0.17.2/libass-0.17.2.tar.xz
+        sha256: e8261b51d66ba933fe99248c6fdd8767ed96c5a7e5363c83992c735a2c2fbf74
+        x-checker-data:
+          type: anitya
+          project-id: 1560
+          stable-only: true
+          url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz
+      - type: script
+        commands:
+          - autoreconf -fiv
+        dest-filename: autogen.sh
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+      - /share
+
+  - name: libplacebo
+    buildsystem: meson
+    config-opts:
+      - -Dvulkan=enabled
+      - -Dshaderc=enabled
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+    sources:
+      - type: git
+        url: https://code.videolan.org/videolan/libplacebo.git
+        mirror-urls:
+          - https://github.com/haasn/libplacebo.git
+        tag: v6.338.2
+        commit: 64c1954570f1cd57f8570a57e51fb0249b57bb90
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+    modules:
+      - name: shaderc
+        buildsystem: cmake-ninja
+        builddir: true
+        config-opts:
+          - -DSHADERC_SKIP_COPYRIGHT_CHECK=ON
+          - -DSHADERC_SKIP_EXAMPLES=ON
+          - -DSHADERC_SKIP_TESTS=ON
+          - -DSPIRV_SKIP_EXECUTABLES=ON
+          - -DENABLE_GLSLANG_BINARIES=OFF
+        cleanup:
+          - /bin
+          - /include
+          - /lib/cmake
+          - /lib/pkgconfig
+          - /lib/*.a
+        sources:
+          - type: git
+            url: https://github.com/google/shaderc.git
+            tag: v2024.1
+            commit: 47a9387ef5b3600d30d84c71ec77a59dc7db46fa
+            #x-checker-data:
+            #  type: git
+            #  tag-pattern: ^v(\d{4}\.\d{1,2})$
+          - type: git
+            url: https://github.com/KhronosGroup/SPIRV-Tools.git
+            tag: v2024.1
+            commit: 04896c462d9f3f504c99a4698605b6524af813c1
+            dest: third_party/spirv-tools
+            x-checker-data:
+              type: git
+              tag-pattern: ^v(\d{4}\.\d{1})$
+          - type: git
+            url: https://github.com/KhronosGroup/SPIRV-Headers.git
+            tag: vulkan-sdk-1.3.283.0
+            commit: 4f7b471f1a66b6d06462cd4ba57628cc0cd087d7
+            dest: third_party/spirv-headers
+            x-checker-data:
+              type: git
+              tag-pattern: ^vulkan-sdk-([\d.]+)$
+          - type: git
+            url: https://github.com/KhronosGroup/glslang.git
+            tag: 14.2.0
+            commit: e8dd0b6903b34f1879520b444634c75ea2deedf5
+            dest: third_party/glslang
+            x-checker-data:
+              type: git
+              tag-pattern: ^(\d{1,2}\.\d{1,2}\.\d{1,4})$
+
+  - name: mpv
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://github.com/mpv-player/mpv/archive/refs/tags/v0.34.1.tar.gz
+        sha256: 32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746
+        x-checker-data:
+          type: anitya
+          project-id: 5348
+          stable-only: true
+          url-template: https://github.com/mpv-player/mpv/archive/refs/tags/v$version.tar.gz
 
   - name: keybinder3
     buildsystem: autotools
