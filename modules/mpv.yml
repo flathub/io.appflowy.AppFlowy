@@ -1,150 +1,31 @@
 name: mpv
+buildsystem: simple
 cleanup:
   - /include
   - /lib/pkgconfig
-  - /share/applications
-  - /share/bash-completion
-  - /share/doc
-  - /share/icons
-  - /share/man
-  - /share/zsh
-buildsystem: meson
-config-opts:
-  - -Dbuild-date=false
-  - -Dlibmpv=true
-  - -Dcplayer=false
-  - -Dmanpage-build=disabled
-  - -Dalsa=disabled
+build-commands:
+  - python3 waf configure --enable-libmpv-shared --disable-build-date
+    --disable-manpage-build --enable-alsa --enable-pulse --enable-libmpv-shared
+  - python3 waf build
+  - python3 waf install
 sources:
   - type: archive
-    url: https://github.com/mpv-player/mpv/archive/v0.35.0.tar.gz
-    sha256: dc411c899a64548250c142bf1fa1aa7528f1b4398a24c86b816093999049ec00
-    x-checker-data:
-      type: anitya
-      project-id: 5348
-      stable-only: true
-      url-template: https://github.com/mpv-player/mpv/archive/v$version.tar.gz
-modules:
-  - name: nv-codec-headers
-    cleanup:
-      - "*"
-    no-autogen: true
-    make-install-args:
-      - PREFIX=/app
-    sources:
-      - type: git
-        url: https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
-        tag: n12.2.72.0
-        commit: c69278340ab1d5559c7d7bf0edf615dc33ddbba7
-        x-checker-data:
-          type: git
-          tag-pattern: ^n([\\d.]+)$
+    url: https://github.com/mpv-player/mpv/archive/v0.34.1.tar.gz
+    sha256: 32ded8c13b6398310fa27767378193dc1db6d78b006b70dbcbd3123a1445e746
+  - type: file
+    url: https://waf.io/waf-2.0.22
+    sha256: 0a09ad26a2cfc69fa26ab871cb558165b60374b5a653ff556a0c6aca63a00df1
+    dest-filename: waf
+
   - name: libass
-    cleanup:
-      - /include
-      - /lib/*.la
-      - /lib/pkgconfig
     config-opts:
       - --disable-static
     sources:
       - type: archive
-        url: https://github.com/libass/libass/releases/download/0.17.2/libass-0.17.2.tar.xz
-        sha256: e8261b51d66ba933fe99248c6fdd8767ed96c5a7e5363c83992c735a2c2fbf74
+        url: https://github.com/libass/libass/releases/download/0.17.2/libass-0.17.2.tar.gz
+        sha256: a9afb52bf76a2569263fe2038896774c991b35c0968342a03be708e56ea60c3b
         x-checker-data:
           type: anitya
           project-id: 1560
           stable-only: true
-          url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.xz
-  - name: libplacebo
-    cleanup:
-      - /include
-      - /lib/*.la
-      - /lib/pkgconfig
-    buildsystem: meson
-    config-opts:
-      - -Dglslang=disabled
-    sources:
-      - type: git
-        url: https://github.com/haasn/libplacebo.git
-        mirror-urls:
-          - https://code.videolan.org/videolan/libplacebo.git
-        tag: v6.338.2
-        commit: 64c1954570f1cd57f8570a57e51fb0249b57bb90
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\\d.]+)$
-  - name: uchardet
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DBUILD_STATIC=0
-    cleanup:
-      - /bin
-      - /include
-      - /lib/pkgconfig
-      - /share/man
-    sources:
-      - type: archive
-        url: https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.8.tar.xz
-        sha256: e97a60cfc00a1c147a674b097bb1422abd9fa78a2d9ce3f3fdcc2e78a34ac5f0
-        x-checker-data:
-          type: anitya
-          project-id: 9265
-          stable-only: true
-          url-template: https://www.freedesktop.org/software/uchardet/releases/uchardet-$version.tar.xz
-  - name: squashfs-tools
-    cleanup:
-      - "*"
-    buildsystem: simple
-    build-commands:
-      - XZ_SUPPORT=1 LZO_SUPPORT=0 make -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS}
-        install INSTALL_DIR=${FLATPAK_DEST}/bin INSTALL_MANPAGES_DIR=${FLATPAK_DEST}/man/man1
-    sources:
-      - type: git
-        url: https://github.com/plougher/squashfs-tools.git
-        tag: 4.6.1
-        commit: d8cb82d9840330f9344ec37b992595b5d7b44184
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\\d.]+)$
-  - name: musicpod
-    buildsystem: simple
-    build-commands:
-      - unsquashfs -quiet -no-progress musicpod.snap
-      - cp -r squashfs-root/bin /app
-      - install -Dm644 squashfs-root/snap/gui/musicpod.desktop /app/share/applications/org.feichtmeier.Musicpod.desktop
-      - desktop-file-edit --set-icon='org.feichtmeier.Musicpod' /app/share/applications/org.feichtmeier.Musicpod.desktop
-      - install -Dm644 squashfs-root/snap/gui/musicpod.png /app/share/icons/hicolor/256x256/apps/org.feichtmeier.Musicpod.png
-      - install -Dm644 org.feichtmeier.Musicpod.appdata.xml /app/share/metainfo/org.feichtmeier.Musicpod.appdata.xml
-    cleanup:
-      - /include
-      - /lib/pkgconfig
-      - /share/man
-    sources:
-      - type: file
-        sha256: 671aa0c690b6eedd4f3939f63ed6f9f0f9bc1032ef57001b491d1df34a057ae0
-        url: https://raw.githubusercontent.com/ubuntu-flutter-community/musicpod/1b4751b0e0f7d9c1ddb21f3abc2bdc1745cc7df2/flatpak/org.feichtmeier.Musicpod.appdata.xml
-      - type: file
-        dest-filename: musicpod.snap
-        only-arches:
-          - x86_64
-        url: https://api.snapcraft.io/api/v1/snaps/download/sxdOSGRbzsWhPmGrkYYAs68rzieTrIiv_1289.snap
-        sha256: 77494a314955ed5c2319802065b30ea4d040de2c4f91cfa681e9d7b2d330454b
-        x-checker-data:
-          type: snapcraft
-          name: musicpod
-          channel: stable
-          architecture: amd64
-          is-main-source: true
-      - type: file
-        dest-filename: musicpod.snap
-        only-arches:
-          - aarch64
-        url: https://api.snapcraft.io/api/v1/snaps/download/sxdOSGRbzsWhPmGrkYYAs68rzieTrIiv_1290.snap
-        sha256: 3264bf6ed90551af8d1bba6c254f00cd4346b640d457f656537b5fa472e8d350
-        x-checker-data:
-          type: snapcraft
-          name: musicpod
-          channel: stable
-          architecture: arm64
-          is-main-source: true
+          url-template: https://github.com/libass/libass/releases/download/$version/libass-$version.tar.gz
