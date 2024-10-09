@@ -1,6 +1,6 @@
 app-id: io.appflowy.AppFlowy
 runtime: org.freedesktop.Platform
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 command: AppFlowy
 separate-locales: false
@@ -70,8 +70,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.7.0/AppFlowy-0.7.0-linux-x86_64.tar.gz
-        sha256: 105998b6b7a7ece95b73211f255c49797664f42cd3024ab72d3cf0238d2c942a
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.7.1/AppFlowy-0.7.1-linux-x86_64.tar.gz
+        sha256: 20d2afc5d6b42715f9a298d562197a7b1cbff649d861b281b921528446513028
         x-checker-data:
           type: anitya
           project-id: 309593
