@@ -70,8 +70,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.7.8/AppFlowy-0.7.8-linux-x86_64.tar.gz
-        sha256: 031bb31047b46cbb5d26a43d8bd7be5d5f66ecae77d4d131de2a5d01caf0115d
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.7.9/AppFlowy-0.7.9-linux-x86_64.tar.gz
+        sha256: b527046f9377d7965285972067630fb7f80f4d90561d16536e085dfdcfa5d38e
         x-checker-data:
           type: anitya
           project-id: 309593
