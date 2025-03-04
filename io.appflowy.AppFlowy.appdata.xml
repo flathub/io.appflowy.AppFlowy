@@ -60,8 +60,11 @@
 		<category>Office</category>
 	</categories>
 	<releases>
-		<release version="0.8.4" date="2025-02-18">
+		<release version="0.8.5" date="2025-03-04">
 			<description></description>
+		</release>
+		<release version="0.8.4" date="2025-02-18">
+			<description/>
 		</release>
 		<release version="0.8.3" date="2025-02-05">
 			<description/>
