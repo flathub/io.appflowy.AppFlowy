@@ -23,7 +23,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/kupferlauncher/keybinder/releases/download/keybinder-3.0-v0.3.2/keybinder-3.0-0.3.2.tar.gz
-        sha256: e6e3de4e1f3b201814a956ab8f16dfc8a262db1937ff1eee4d855365398c6020
+        sha256: 603d06ef064f1ed5db89d11acca3aaa7efcf7459271842054b055df4941d81fb
 
   - name: openssl
     buildsystem: simple
@@ -34,7 +34,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/openssl/openssl/archive/OpenSSL_1_1_1s.tar.gz
-        sha256: 0dc03a5842801884e25211d81f9fa8d2fce5aad6a9e996eac0deb68994a80243
+        sha256: 603d06ef064f1ed5db89d11acca3aaa7efcf7459271842054b055df4941d81fb
     cleanup:
       - /share/doc
       - /share/man
@@ -50,7 +50,7 @@ modules:
     sources:
       - type: archive
         url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.7.tar.xz
-        sha256: 4be15202ec4184fce1ac15997ece5530d2be32fe9573875aeb10e3b573858748
+        sha256: 603d06ef064f1ed5db89d11acca3aaa7efcf7459271842054b055df4941d81fb
         x-checker-data:
           type: anitya
           project-id: 13149
@@ -70,8 +70,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.10.6/AppFlowy-0.10.6-linux-x86_64.tar.gz
-        sha256: e63c0782fa1013f2040f74ee3fa7ba4c460fe6abc34a744b11465175ae87545a
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.10.6/AppFlowy-0.10.7-linux-x86_64.tar.gz
+        sha256: 603d06ef064f1ed5db89d11acca3aaa7efcf7459271842054b055df4941d81fb
         x-checker-data:
           type: anitya
           project-id: 309593
