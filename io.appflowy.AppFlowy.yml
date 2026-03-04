@@ -14,7 +14,6 @@ finish-args:
   - --filesystem=home
   - --system-talk-name=org.freedesktop.NetworkManager.*
   - --own-name=io.appflowy.appflowy
-  - --talk-name=org.freedesktop.Notifications
 
 modules:
   - name: keybinder3
