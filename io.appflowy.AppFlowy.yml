@@ -57,7 +57,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.12.1/AppFlowy-0.12.1-linux-x86_64.tar.gz
-        sha256: 489f531b553b4d0761844128479a88de7867989d7012bfa7a268749bf565d208
+        sha256: af3c1dc1805ebafd4d7be530b0002e20a72ae7842ed7d420e70066d68e8cd98e
         x-checker-data:
           type: anitya
           project-id: 309593
