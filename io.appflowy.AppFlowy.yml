@@ -42,6 +42,29 @@ modules:
           project-id: 13149
           url-template: https://download.gnome.org/sources/libnotify/$major.$minor/libnotify-$version.tar.xz
 
+  # AppFlowy 0.12.2 links against libbz2.so.1.0 (Debian-style soname), which is
+  # not provided by the org.freedesktop.Platform runtime. Bundle it so the app
+  # can start. See https://github.com/AppFlowy-IO/AppFlowy/issues/8793
+  - name: bzip2
+    buildsystem: simple
+    build-commands:
+      - make -f Makefile-libbz2_so
+      - install -Dm755 libbz2.so.1.0.8 /app/lib/libbz2.so.1.0.8
+      - ln -s libbz2.so.1.0.8 /app/lib/libbz2.so.1.0
+      - ln -s libbz2.so.1.0 /app/lib/libbz2.so.1
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - '*.a'
+    sources:
+      - type: archive
+        url: https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
+        sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+        x-checker-data:
+          type: anitya
+          project-id: 237
+
   - name: appflowy
     buildsystem: simple
     build-commands:
