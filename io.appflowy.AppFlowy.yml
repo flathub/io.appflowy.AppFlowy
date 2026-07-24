@@ -79,8 +79,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.12.5/AppFlowy-0.12.5-linux-x86_64.tar.gz
-        sha256: 8a6bf9b1657aec795ea9a87fee31e3a231d6d872275c54d62259ec62a2dc08de
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.13.0/AppFlowy-0.13.0-linux-x86_64.tar.gz
+        sha256: 7e20ab633ea7e6f9446fcb3a836d888f5a1b8a4b0efac061fd4bb46ebc492d97
         x-checker-data:
           type: anitya
           project-id: 309593
