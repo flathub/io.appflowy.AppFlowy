@@ -65,6 +65,90 @@ modules:
           type: anitya
           project-id: 237
 
+  # AppFlowy 0.14.3 changed the way its Linux tarball is assembled: the new
+  # bundler ships a "host-libraries.regex" deny list and stopped shipping every
+  # library matched by it. That list assumes Debian/Ubuntu sonames (the release
+  # is built on ubuntu-22.04) and includes libjpeg.so.8, libbsd.so.0 and
+  # libmd.so.0, so those files are now absent from lib/ although the 0.14.2
+  # tarball still contained them.
+  #
+  # org.freedesktop.Platform ships libjpeg.so.62 -- a different soname -- and no
+  # libbsd/libmd at all, so the app aborts with
+  # "error while loading shared libraries: libjpeg.so.8".
+  #
+  # Remaining unresolved sonames in the 0.14.3 bundle:
+  #   libjpeg.so.8 <- lib/libmpv.so.1
+  #   libbsd.so.0  <- lib/libzmq.so.5, lib/libsndio.so.7
+  #   libmd.so.0   <- libbsd.so.0
+  #
+  # Fixes https://github.com/flathub/io.appflowy.AppFlowy/issues/227
+  # Fixes https://github.com/flathub/io.appflowy.AppFlowy/issues/228
+  - name: libmd
+    buildsystem: autotools
+    config-opts:
+      - --disable-static
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+      - /share/man
+      - '*.la'
+    sources:
+      - type: archive
+        url: https://archive.hadrons.org/software/libmd/libmd-1.2.0.tar.xz
+        sha256: ac15ffb8430502fbaccdec66c5a82ee0eab0b0f36220df56710feadfeb13d0a0
+        x-checker-data:
+          type: anitya
+          project-id: 15525
+          url-template: https://archive.hadrons.org/software/libmd/libmd-$version.tar.xz
+
+  - name: libbsd
+    buildsystem: autotools
+    config-opts:
+      - --disable-static
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+      - /share/man
+      - '*.a'
+      - '*.la'
+    sources:
+      - type: archive
+        url: https://libbsd.freedesktop.org/releases/libbsd-0.12.2.tar.xz
+        sha256: b88cc9163d0c652aaf39a99991d974ddba1c3a9711db8f1b5838af2a14731014
+        x-checker-data:
+          type: anitya
+          project-id: 1567
+          url-template: https://libbsd.freedesktop.org/releases/libbsd-$version.tar.xz
+
+  # Built with the libjpeg v8 API/ABI (WITH_JPEG8) so it installs the
+  # libjpeg.so.8 soname that the bundled libmpv.so.1 was linked against. This is
+  # the same ABI Ubuntu's libjpeg-turbo8 package provides. The runtime's own
+  # libjpeg.so.62 uses a different soname and is left untouched.
+  - name: libjpeg-turbo
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_LIBDIR=lib
+      - -DENABLE_STATIC=OFF
+      - -DWITH_JPEG8=1
+      - -DWITH_TURBOJPEG=OFF
+    cleanup:
+      - /bin
+      - /include
+      - /lib/cmake
+      - /lib/pkgconfig
+      - /share/man
+      - /share/doc
+      - '*.a'
+    sources:
+      - type: archive
+        url: https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.0/libjpeg-turbo-3.2.0.tar.gz
+        sha256: 6f30092cef9fb839779646608f4ee14ae3cbac989c47fa05e841b0841f09878e
+        x-checker-data:
+          type: anitya
+          project-id: 1648
+          url-template: https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$version/libjpeg-turbo-$version.tar.gz
+
   - name: appflowy
     buildsystem: simple
     build-commands:
