@@ -1,6 +1,6 @@
 app-id: io.appflowy.AppFlowy
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: AppFlowy
 separate-locales: false
@@ -56,7 +56,7 @@ modules:
       - /bin
       - /include
       - /lib/pkgconfig
-      - '*.a'
+      - "*.a"
     sources:
       - type: archive
         url: https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
@@ -79,8 +79,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.14.3/AppFlowy-0.14.3-linux-x86_64.tar.gz
-        sha256: 92c77841e65aa823eef6b4d9525006a88236fc0ca9be680782ecabe37f3baf40
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.14.4/AppFlowy-0.14.4-linux-x86_64.tar.gz
+        sha256: e465cbddcc7ccd930fee4ce82a81842447972371a5cfdc2e20bb4a66057f6499
         x-checker-data:
           type: anitya
           project-id: 309593
