@@ -35,8 +35,8 @@ modules:
       - -Ddocbook_docs=disabled
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.8.tar.xz
-        sha256: 23420ef619dc2cb5aebad613f4823a2fa41c07e5a1d05628d40f6ec4b35bfddd
+        url: https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.9.tar.xz
+        sha256: c906bb084027ea512f94a60fbfc0cc8d4f17e4b4d525bed370d07a6d8714c923
         x-checker-data:
           type: anitya
           project-id: 13149
@@ -79,8 +79,8 @@ modules:
       - ln -s /app/appflowy/AppFlowy /app/bin/AppFlowy
     sources:
       - type: archive
-        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.14.6/AppFlowy-0.14.6-linux-x86_64.tar.gz
-        sha256: c1fda271f703ef159026e395d9830998a57ff7486052b32e577f5651b6a42ec2
+        url: https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.14.8/AppFlowy-0.14.8-linux-x86_64.tar.gz
+        sha256: ac12eb021b1ee8935949fb8db5fa90e8f24fb95ebeb62e4f0c7ec06a6f9e332b
         x-checker-data:
           type: anitya
           project-id: 309593
