@@ -64,6 +64,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 237
+          url-template: https://sourceware.org/pub/bzip2/bzip2-$version.tar.gz
 
   - name: appflowy
     buildsystem: simple
